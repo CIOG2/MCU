@@ -12,6 +12,7 @@
 }
 
 .Login__form{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +75,44 @@
     background-color: var(--rojo, red);
     border-radius: 5px;
     transition: all 0.5s;
+    cursor: pointer;
+}
+
+.login__form--container-remenberme{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 30px;
+}
+
+.login__form--container-remenberme input{
+    position: absolute;
+}
+
+.login__form--label-checkbox{
+    color: #8c8c8c;
+    font-size: 1.3rem;
+    margin-left: 20px;
 }
 
 
+.login__form--create-account{
+    font-size: 1.3rem;
+    color: #8c8c8c;
+    text-decoration: none;
+    transition: all 0.5s;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
+
+.login__form--back-home{
+    width: 90%;
+    font-size: 1.3rem;
+    color: #8c8c8c;
+    text-decoration: underline;
+    transition: all 0.5s;
+    cursor: pointer;
+}

@@ -4,8 +4,6 @@ const Login = () => {
     textoInicioSecion.classList.add('Login__form__title');
     textoInicioSecion.textContent = 'Iniciar Sesión';
 
-
-
     const labelEmail = document.createElement('label');
     labelEmail.textContent = 'Correo electrónico';  
     labelEmail.setAttribute('for', 'email');
@@ -59,10 +57,38 @@ const Login = () => {
     });
 
 
+    const checkbox = document.createElement('input');
+    checkbox.setAttribute('type', 'checkbox');
+    checkbox.setAttribute('id', 'remember');
+
+    const labelCheckbox = document.createElement('label');
+    labelCheckbox.setAttribute('for', 'remember');
+    labelCheckbox.textContent = 'Recordarme';
+    labelCheckbox.classList.add('login__form--label-checkbox');
+    
+    const containerCheckbox = document.createElement('div');
+    containerCheckbox.classList.add('login__form--container-checkbox');
+    containerCheckbox.append(checkbox, labelCheckbox);
+
+    const createAccount = document.createElement('h3');
+    createAccount.classList.add('login__form--create-account');
+    createAccount.textContent = 'Crear cuenta';
+    
+    const contenedorRemenberme = document.createElement('div');    
+    contenedorRemenberme.classList.add('login__form--container-remenberme');
+    contenedorRemenberme.append(containerCheckbox, createAccount);
+
+    const backHome = document.createElement('p');
+    backHome.classList.add('login__form--back-home');
+    backHome.textContent = 'Volver al inicio';
+    backHome.addEventListener('click', () => {
+        const modalLogin = document.getElementById('container-login');
+        modalLogin.remove();
+    });
 
     const form = document.createElement("form");
     form.classList.add("Login__form");
-    form.append( textoInicioSecion, containerEmail, containerPassword, botonIniciarSesion );
+    form.append( textoInicioSecion, containerEmail, containerPassword, botonIniciarSesion, contenedorRemenberme, backHome);
 
 
     const containerLogin = document.createElement('div');

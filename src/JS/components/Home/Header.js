@@ -1,4 +1,4 @@
-const Header = () => {
+const HomeHeader = () => {
     const logo = document.createElement("img");
     logo.classList.add("Home__header--logo");
     logo.src = "https://i.ibb.co/mCFzdsZ/Marvel-Logo.png";
@@ -14,4 +14,4 @@ const Header = () => {
     return header;
 }
 
-export default Header;
+export default HomeHeader;

@@ -1,5 +1,6 @@
-import Header from "./components/Home/Header.js";
+import HomeHeader from "./components/Home/Header.js";
+import HomeMain from "./components/Home/Main.js";
 
 const app = document.getElementById("app");
 
-app.append(Header());
+app.append(HomeHeader(), HomeMain());

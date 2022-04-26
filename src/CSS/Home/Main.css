@@ -1,5 +1,33 @@
 .Home__main{
     width: 100%;
     height: calc(100% - 60px);
-    background-color: royalblue;
+    overflow: hidden;
+}
+
+.Home__main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.degradado{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: calc(100% - 60px);
+    background: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px){
+    .Home__main img{
+        height: 40%;
+    }
+    .degradado{
+        width: 100%;
+        height: calc(60% - 60px);
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+        z-index: 1;
+    }
 }

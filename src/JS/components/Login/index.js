@@ -1,3 +1,5 @@
+import LoginValidation from "../../utils/LoginValidation.js";
+
 const Login = () => {
 
     const textoInicioSecion = document.createElement('h2');
@@ -53,7 +55,7 @@ const Login = () => {
     botonIniciarSesion.textContent = 'Iniciar Sesión';
     botonIniciarSesion.type = 'button';
     botonIniciarSesion.addEventListener('click', () => {
-        console.log('Iniciar Sesión');
+        LoginValidation();
     });
 
 

@@ -57,9 +57,9 @@
 
 
 .button-join-active{
-    animation: fadeIn 3s;
+    animation: shakeki 3s;
 }
-@keyframes fadeIn {
+@keyframes shakeki {
     0% {
         transform: rotate(10deg) scale(1.2);
         background-color: blue;

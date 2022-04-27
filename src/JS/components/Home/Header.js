@@ -11,6 +11,7 @@ const HomeHeader = () => {
     loginButton.textContent = "Iniciar Sesión";
     loginButton.addEventListener("click", () => {
         document.getElementById("app").append(Login());
+        document.getElementById("container-main-elements").style.opacity = "0";
         setTimeout(() => {
             document.getElementById("container-login").style.opacity = "1";
         }, 10);

@@ -73,6 +73,15 @@ const Login = () => {
     const createAccount = document.createElement('h3');
     createAccount.classList.add('login__form--create-account');
     createAccount.textContent = 'Crear cuenta';
+    createAccount.addEventListener('click', () => {
+        const modalLogin = document.getElementById('container-login');
+        document.getElementById("container-main-elements").style.opacity = "1";
+        modalLogin.remove();
+        document.getElementById("button-join").classList.add('button-join-active');
+        setTimeout(() => {
+            document.getElementById("button-join").classList.remove('button-join-active');
+        }, 3000);
+    })
     
     const contenedorRemenberme = document.createElement('div');    
     contenedorRemenberme.classList.add('login__form--container-remenberme');
@@ -83,6 +92,7 @@ const Login = () => {
     backHome.textContent = 'Volver al inicio';
     backHome.addEventListener('click', () => {
         const modalLogin = document.getElementById('container-login');
+        document.getElementById("container-main-elements").style.opacity = "1";
         modalLogin.remove();
     });
 

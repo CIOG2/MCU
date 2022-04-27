@@ -1,4 +1,4 @@
-import Login from "../login/index.js";
+import Login from "../Login/index.js";
 
 const HomeHeader = () => {
     const logo = document.createElement("img");

@@ -5,8 +5,7 @@ const LoginValidation = () => {
     let password = document.getElementById("password-login").value;
     let rememberMe = document.getElementById("remember-me").checked;
 
-    console.log(LocalStorage().get('MCU'));
-
+    
     if (email === "" || password === "") {
         swal("¿A donde tan rapido?", "Tienes que poner tus datos primero", "error");
     } else {

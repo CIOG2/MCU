@@ -79,6 +79,4 @@ const emailRegistered = (value) => {
     }
 }
 
-
-
 export default RegisterValidation;

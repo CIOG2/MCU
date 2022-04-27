@@ -15,6 +15,7 @@ const Login = () => {
     email.setAttribute('type', 'email');
     email.setAttribute('autocomplete', 'on');
     email.classList.add('login__form--input');
+    email.id = 'email-login';
     email.addEventListener('focus', () => {
         labelEmail.style.fontSize = '1.4rem';
         labelEmail.style.top = '0px';
@@ -37,6 +38,7 @@ const Login = () => {
     password.setAttribute('type', 'password');
     password.setAttribute('autocomplete', 'on');
     password.classList.add('login__form--input');
+    password.id = 'password-login';
     password.addEventListener('focus', () => {
         labelPassword.style.fontSize = '1.4rem';
         labelPassword.style.top = '0px';
@@ -61,7 +63,8 @@ const Login = () => {
 
     const checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
-    checkbox.setAttribute('id', 'remember');
+    checkbox.id = 'remember-me';
+
 
     const labelCheckbox = document.createElement('label');
     labelCheckbox.setAttribute('for', 'remember');

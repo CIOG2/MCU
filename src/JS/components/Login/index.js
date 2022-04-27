@@ -1,5 +1,4 @@
 import LoginValidation from "../../utils/LoginValidation.js";
-
 const Login = () => {
 
     const textoInicioSecion = document.createElement('h2');

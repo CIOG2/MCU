@@ -1,3 +1,5 @@
+import Register from '../Register/index.js';
+
 const HomeMain = () => {
 
     const image = document.createElement('img');
@@ -18,7 +20,12 @@ const HomeMain = () => {
     buttonJoin.textContent = 'Unirse';
     buttonJoin.classList.add('Home__main--join');
     buttonJoin.id = 'button-join';
-    
+    buttonJoin.addEventListener('click', () => {
+        document.getElementById('app').appendChild(Register());
+        document.getElementById("container-main-elements").style.opacity = "0";
+    });
+
+
     const containerElements = document.createElement('div');
     containerElements.classList.add('Home__main--elments');
     containerElements.id = 'container-main-elements';

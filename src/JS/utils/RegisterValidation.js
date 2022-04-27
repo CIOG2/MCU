@@ -10,28 +10,27 @@ const RegisterValidation = () => {
 
 
     if (name === '' || email === '' || emailConfirmation === '' || password === '' || passwordConfirm === '') {
-        alert('Todos los campos son obligatorios');
+        swal('¿A donde tan rapido?', 'Todos los campos son obligatorios', 'error');
     } else if (email !== emailConfirmation) {
-        alert('Los emails no coinciden');
+        swal('Algo anda mal', 'Tus correos no coinciden', 'error');
     }  else if (!validationPassword(password)) {
-        alert('La contraseña debe tener al menos una letra mayuscula, una minuscula     |y un número');
+        swal('¿Enserio pondrias eso?', 'Tu contraseña de tener una letra mayuscula, una minuscula un número y minimo 8 digitos', 'error');
     }else{
         if (!validationEmail(email) ) {
-            alert('El email no es valido');
+            swal('¿Seguro que ese es tu correo?', 'Prueba con algo mas moderno', 'error');
         } 
         else if(password.length <= 8) {
-            alert('La contraseña debe tener más de 8 caracteres');
+            swal('Prueba con algo mas seguro', 'La contraseña minimo debe de terner 8 caracteres', 'error');
         } 
         else if (password !== passwordConfirm) {
-            alert('Las contraseñas no coinciden');
+            swal('Algo anda mal', 'Tus contraseñas no coinciden', 'error');
         } 
         else if (emailRegistered(email)) {
-            alert('El email ya está registrado');
+            swal('Ya tienes una cuenta', 'Este correo ya está registrado', 'error');
         } 
         else if (name.length <= 3) {
-            alert('El nombre debe tener más de 3 caracteres');
+            swal('¿Que tal algo mas creativo?', 'El nombre debe tener más de 3 caracteres', 'error');
         } else {
-            
             let data = LocalStorage().get('MCU');
             if (data === null) {
                 data = {users: []};
@@ -45,7 +44,7 @@ const RegisterValidation = () => {
             });
 
             LocalStorage().set('MCU', newData);
-            alert('Registro exitoso');
+            swal('Listo', 'Registro Exitoso', 'success');
         }
     }
 }

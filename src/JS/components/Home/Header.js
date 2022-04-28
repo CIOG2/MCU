@@ -17,6 +17,7 @@ const HomeHeader = () => {
     const loginButton = document.createElement("button");
     loginButton.classList.add("Home__header--login");
     loginButton.textContent = "Iniciar Sesión";
+    loginButton.id = "login-Button";
     loginButton.addEventListener("click", () => {
         document.getElementById("app").append(Login());
         document.getElementById("container-main-elements").style.opacity = "0";

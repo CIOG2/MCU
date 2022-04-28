@@ -9,6 +9,7 @@ const RegisterValidation = () => {
     const passwordConfirm = document.getElementById('input-Password-Confirm').value; 
 
 
+
     if (name === '' || email === '' || emailConfirmation === '' || password === '' || passwordConfirm === '') {
         swal('¿A donde tan rapido?', 'Todos los campos son obligatorios', 'error');
     } else if (email !== emailConfirmation) {
@@ -42,9 +43,15 @@ const RegisterValidation = () => {
                 email: email,
                 password: password,
             });
-
+        
             LocalStorage().set('MCU', newData);
-            swal('Listo', 'Registro Exitoso', 'success');
+            document.getElementById('container-register').remove();
+            
+            document.getElementById('login-Button').classList.add('button-join-active');
+            setTimeout(() => {
+                document.getElementById('login-Button').classList.remove('button-join-active');
+                document.getElementById('login-Button').click();
+            }, 3000);        
         }
     }
 }

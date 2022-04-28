@@ -14,10 +14,10 @@ const LoginValidation = () => {
             let users = data.users;
             let user = users.find(user => user.email === email && user.password === password);
             if (user) {
-                swal("¡Bienvenido!", "Has iniciado sesión correctamente", "success");
                 let login = {
                     email: email,
-                    rememberMe: rememberMe
+                    rememberMe: rememberMe,
+                    fastLogin: true
                 }
                 let newData = {
                     login: login,
@@ -25,6 +25,7 @@ const LoginValidation = () => {
                 };
 
                 LocalStorage().set('MCU', newData);
+                window.location.reload();
             } else {
                 swal("Correo Incorrecto", "¿Ya tienes una cuenta?", "error");
             }

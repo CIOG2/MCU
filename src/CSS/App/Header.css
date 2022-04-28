@@ -12,3 +12,14 @@
 .header__app--logo{
     width: 95px;
 }
+
+.header__app--logout{
+    width: 110px;
+    height: 35px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--rojo, red);
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}

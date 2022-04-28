@@ -4,8 +4,7 @@ const MainApp = (data) => {
 
     data.forEach(element => {
         if (!element.thumbnail.path.includes('image_not_available')) {            
-            console.log(element); 
-
+            
             const containerElement = document.createElement('div');
             containerElement.classList.add('main__app--containers');
 

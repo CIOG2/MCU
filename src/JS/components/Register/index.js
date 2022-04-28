@@ -57,7 +57,7 @@ const Register = () => {
     });
 
 
-    const backHome = document.createElement('p');
+    const backHome = document.createElement('button');
     backHome.textContent = 'Volver al inicio';
     backHome.classList.add('form__register--back');
     backHome.addEventListener('click', () => {
@@ -66,10 +66,14 @@ const Register = () => {
         modalLogin.remove();
     });
 
+    const containerBackHome = document.createElement('div');
+    containerBackHome.classList.add('login__form--container-back-home');
+    containerBackHome.append(backHome);
+
     const form = document.createElement('form');
     form.classList.add('form__register');
     form.id = 'form-register';
-    form.append(title, inputName, inputEmail, inputEmailConfirmation, inputPassword, inputPasswordConfirm, buttonRegister, backHome);
+    form.append(title, inputName, inputEmail, inputEmailConfirmation, inputPassword, inputPasswordConfirm, buttonRegister, containerBackHome);
 
     const container = document.createElement('div');
     container.classList.add('container__register');

@@ -65,11 +65,17 @@
     cursor: pointer;
 }
 
+.form__register--button:focus{
+    outline: auto;
+}
+
 .form__register--back{
-    width: 90%;
+    width: auto;
     font-size: 1.3rem;
     color: #8c8c8c;
     text-decoration: underline;
     transition: all 0.5s;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }

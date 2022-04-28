@@ -74,7 +74,7 @@ const Login = () => {
     containerCheckbox.classList.add('login__form--container-checkbox');
     containerCheckbox.append(checkbox, labelCheckbox);
 
-    const createAccount = document.createElement('h3');
+    const createAccount = document.createElement('button');
     createAccount.classList.add('login__form--create-account');
     createAccount.textContent = 'Crear cuenta';
     createAccount.addEventListener('click', () => {
@@ -91,7 +91,7 @@ const Login = () => {
     contenedorRemenberme.classList.add('login__form--container-remenberme');
     contenedorRemenberme.append(containerCheckbox, createAccount);
 
-    const backHome = document.createElement('p');
+    const backHome = document.createElement('button');
     backHome.classList.add('login__form--back-home');
     backHome.textContent = 'Volver al inicio';
     backHome.addEventListener('click', () => {
@@ -100,9 +100,13 @@ const Login = () => {
         modalLogin.remove();
     });
 
+    const containerBackHome = document.createElement('div');
+    containerBackHome.classList.add('login__form--container-back-home');
+    containerBackHome.append(backHome);
+
     const form = document.createElement("form");
     form.classList.add("Login__form");
-    form.append( textoInicioSecion, containerEmail, containerPassword, botonIniciarSesion, contenedorRemenberme, backHome);
+    form.append( textoInicioSecion, containerEmail, containerPassword, botonIniciarSesion, contenedorRemenberme, containerBackHome);
 
 
     const containerLogin = document.createElement('div');

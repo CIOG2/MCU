@@ -80,6 +80,9 @@
     transition: all 0.5s;
     cursor: pointer;
 }
+.login__form--button:focus{
+    outline: auto;
+}
 
 .login__form--container-remenberme{
     position: relative;
@@ -108,14 +111,24 @@
     transition: all 0.5s;
     text-decoration: underline;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
+.login__form--container-back-home{
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: auto;
+}
 
 .login__form--back-home{
-    width: 90%;
+    width: auto;
     font-size: 1.3rem;
     color: #8c8c8c;
     text-decoration: underline;
     transition: all 0.5s;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }

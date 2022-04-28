@@ -99,13 +99,13 @@
 
 .login__form--label-checkbox{
     color: #8c8c8c;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-left: 20px;
 }
 
 
 .login__form--create-account{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #8c8c8c;
     text-decoration: none;
     transition: all 0.5s;
@@ -124,7 +124,7 @@
 
 .login__form--back-home{
     width: auto;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #8c8c8c;
     text-decoration: underline;
     transition: all 0.5s;

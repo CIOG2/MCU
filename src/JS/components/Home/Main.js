@@ -3,7 +3,7 @@ import Register from '../Register/index.js';
 const HomeMain = () => {
 
     const image = document.createElement('img');
-    image.src = 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/doctorstrangeinthemultiverseofmadness_lob_mas_dsk_06.jpg';
+    image.src = 'https://i.ibb.co/C8sS3Db/Doctor-Strange.jpg';
     image.alt = 'doctor strange multiverse of madness';
 
     
